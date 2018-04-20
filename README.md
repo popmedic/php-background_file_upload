@@ -6,6 +6,8 @@ Let's say we have a form, presented to the user with PHP, and the action of the 
 
 # Poorman's Threadin' Example
 
+![flow](flow.png)
+
 ## The View (index.php)
 
 The view is just a simple form with 2 file inputs, a submit button to upload them, and a results div.
