@@ -61,7 +61,6 @@ if (count($_FILES) > 0) {
         escapeshellarg(join(DIRECTORY_SEPARATOR, array(dirname(__FILE__), "call_service.php")))." ".
         escapeshellarg(json_encode($arg));
     $log = escapeshellarg(join(DIRECTORY_SEPARATOR, array(dirname(__FILE__), "uploads", "log.txt")));
-    print($cmd);
     execbg($cmd, $log);
 }
 ?>

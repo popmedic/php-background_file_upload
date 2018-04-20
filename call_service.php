@@ -1,5 +1,4 @@
 <?php
-print_r($argv);
 $c = curl_init("http://localhost/www/background_file_upload/upload.php");                                                                      
 curl_setopt($c, CURLOPT_CUSTOMREQUEST, "POST");                                                                     
 curl_setopt($c, CURLOPT_POSTFIELDS, $argv[1]);                                                                      
