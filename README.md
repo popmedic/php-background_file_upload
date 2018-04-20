@@ -8,21 +8,21 @@ Let's say we have a form, presented to the user with PHP, and the action of the 
 
 ![flow](flow.png)
 
-## The View ([index.php](blob/master/index.php))
+## The View ([index.php](index.php))
 
 The view is just a simple form with 2 file inputs, a submit button to upload them, and a results div.
 
 ![view image](view.png)
 
-## The Controller ([index.php](blob/master/index.php))
+## The Controller ([index.php](index.php))
 
 The controller (`index.php`) takes care of the crux of the problem.  If no post values exist it will show the form.  Otherwise it will take the files, and upload them to th "other service" using `exec` to run a PHP script to pass those files on to the "other service."  
 
-## The Background Call ([call_service.php](blob/master/call_service.php))
+## The Background Call ([call_service.php](call_service.php))
 
 The background call is the php script run in the background to call out to the "other service."
 
-## The "Other Service" ([upload.php](blob/master/upload.php))
+## The "Other Service" ([upload.php](upload.php))
 
 For this example I will use another PHP script for the "other service."  This "other service" will just move the files into the "uploads" directory.  
 
