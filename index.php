@@ -47,7 +47,7 @@ if (count($_FILES) > 0) {
         return;
     }
     // pass them to the upload.php script
-    $arg = array('files'=>array(
+    $arg = array(
         array(
             'name'=>$_FILES['file1']['name'],
             'data'=>base64_encode(file_get_contents($_FILES['file1']['tmp_name'])),
@@ -55,7 +55,7 @@ if (count($_FILES) > 0) {
         array(
             'name'=>$_FILES['file2']['name'],
             'data'=>base64_encode(file_get_contents($_FILES['file2']['tmp_name'])),
-        ))
+        )
     );
     $cmd = escapeshellcmd("/usr/bin/php")." -f ".
         escapeshellarg(join(DIRECTORY_SEPARATOR, array(dirname(__FILE__), "call_service.php")))." ".

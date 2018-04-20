@@ -1,6 +1,6 @@
 <?php
 $arg = json_decode(file_get_contents('php://input'), true);
-foreach ($arg['files'] as $file) {
+foreach ($arg as $file) {
     $to = join(
         DIRECTORY_SEPARATOR, 
         array(
