@@ -10,7 +10,7 @@ Let's say we have a form, presented to the user with PHP, and the action of the 
 
 The view is just a simple form with 2 file inputs, a submit button to upload them, and a results div.
 
-![view image][view.png]
+![view image](view.png)
 
 ## The Controller
 
