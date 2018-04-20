@@ -6,25 +6,27 @@ Let's say we have a form, presented to the user with PHP, and the action of the 
 
 # Poorman's Threadin' Example
 
-## The View
+## The View (index.php)
 
 The view is just a simple form with 2 file inputs, a submit button to upload them, and a results div.
 
 ![view image](view.png)
 
-## The Controller
+## The Controller (index.php)
 
 The controller (`index.php`) takes care of the crux of the problem.  If no post values exist it will show the form.  Otherwise it will take the files, and upload them to th "other service" using `exec` to run a PHP script to pass those files on to the "other service."  
 
-## The "Other Service"
+## The Background Call (call_service.php)
+
+The background call is the php script run in the background to call out to the "other service."
+
+## The "Other Service" (upload.php)
 
 For this example I will use another PHP script for the "other service."  This "other service" will just move the files into the "uploads" directory.  
 
 ## Dependencies
 
-This example requires a webservice with PHP module loaded, PHP cli, and the CURL libraries installed for PHP.  Installing and configuring them is outside the scope of this example.  
-
-Unix systems only (Darwin included).
+This example requires a webservice with PHP module loaded, PHP cli, and the CURL libraries installed for PHP.  Installing and configuring them is outside the scope of this example.
 
 ## Caveats
 
